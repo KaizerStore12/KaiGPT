@@ -1,0 +1,83 @@
+:root {
+    --bg: #ffffff;
+    --card: #f4f4f4;
+    --text: #222;
+    --accent: #4b8bff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0d0d0d;
+        --card: #1a1a1a;
+        --text: #f0f0f0;
+        --accent: #4b8bff;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+}
+
+#chat-container {
+    width: 100%;
+    max-width: 650px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.bubble {
+    padding: 12px 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    max-width: 80%;
+    line-height: 1.5;
+}
+
+.user {
+    background: var(--accent);
+    color: white;
+    margin-left: auto;
+}
+
+.bot {
+    background: var(--card);
+}
+
+#input-box {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #333;
+    background: var(--bg);
+}
+
+#userInput {
+    flex: 1;
+    padding: 14px;
+    background: var(--card);
+    border: none;
+    outline: none;
+    color: var(--text);
+    border-radius: 10px;
+}
+
+button {
+    margin-left: 10px;
+    padding: 14px 20px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
